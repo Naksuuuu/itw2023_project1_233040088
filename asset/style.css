@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-primary: #87c4ff;
+  --bg-secondary: #39a7ff;
+  --bg-white: #ffffff;
+
+  --bg-container: #e0f4ff99;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--bg-primary);
+  min-height: 300vh;
+}
+
+/* all selector & reuse selector */
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+.bg-costume {
+  background-color: var(--bg-container);
+  border-radius: 10px;
+}
+
+.btn-costume {
+  width: max-content;
+  padding: 6px 12px;
+  color: white;
+  font-weight: 600;
+}
+
+section .bg-costume {
+  padding: 30px;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+/* navbar */
+
+nav .bg-costume {
+  padding: 10px 30px;
+}
+
+nav a.navbar-brand {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--bg-secondary);
+}
+
+nav a.nav-link {
+  font-weight: 600;
+  display: flex;
+  width: max-content;
+  height: max-content;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--bg-white);
+  background-color: var(--bg-secondary);
+  box-sizing: border-box;
+}
+
+/* hero */
+
+.hero-txt {
+  color: white;
+}
+
+.btn-hire {
+  background-color: #39a7ff;
+}
+
+.btn-download {
+  background-color: white;
+  border: 1px solid #39a7ff;
+  color: #39a7ff;
+}
+
+/* portfolio */
+
+#portfolio img {
+  border-radius: 10px;
+}
+
+/* contact */
+
+#contact {
+  min-height: 100vh;
+}
+
+.bg-contact {
+  background-image: url(svg/BgContact.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+form {
+  width: clamp(240px, 100%, 500px);
+  padding: 40px 0;
+  box-sizing: border-box;
+  border: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.form-items {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.form-items input,
+.form-items textarea,
+.form-items button {
+  outline: none;
+  border: none;
+  padding: 10px 8px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.btn-form {
+  background-color: grey;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-form::-ms-value {
+  color: white;
+}
+
+/* responsive breakpoint */
+
+@media screen and (max-width: 576px) {
+  nav a.navbar-brand {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* hero */
+  #hero .row {
+    gap: 30px;
+  }
+
+  .hero-btn {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  section {
+    min-height: 100vh;
+  }
+}

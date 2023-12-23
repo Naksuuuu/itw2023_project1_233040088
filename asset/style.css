@@ -266,7 +266,7 @@ footer {
 }
 
 footer .col-12 {
-  height: 40px;
+  min-height: 40px;
   font-weight: 500;
 }
 

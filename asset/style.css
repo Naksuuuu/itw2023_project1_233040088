@@ -301,6 +301,7 @@ footer .col-12 {
     row-gap: 30px;
     height: 100vh;
     justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (max-width: 768px) {

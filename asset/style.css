@@ -314,6 +314,6 @@ footer .col-12 {
     scroll-padding-top: 55px;
   }
   section {
-    padding-top: 20px;
+    padding: 20px 0;
   }
 }

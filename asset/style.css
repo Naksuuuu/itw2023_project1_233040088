@@ -300,8 +300,7 @@ footer .col-12 {
   .navbar-nav {
     row-gap: 30px;
     height: 100vh;
-    justify-content: center;
-    padding-bottom: 140px;
+    padding-top: 100px;
   }
 }
 @media screen and (max-width: 768px) {

@@ -125,6 +125,10 @@ nav {
   background-color: var(--clr-white-1);
 }
 
+.nav-tools-2 {
+  display: none;
+}
+
 /* home */
 
 .home-txt * {
@@ -175,8 +179,19 @@ nav {
   box-sizing: border-box;
 }
 
+.container-about,
+.about-skill {
+  border-radius: 10px;
+}
+
 .about-txt p {
   text-indent: 24px;
+}
+
+.about-skill {
+  border: 2px solid var(--clr-yellow-1);
+  padding: 30px 0;
+  box-sizing: border-box;
 }
 
 .skill-tittle {
@@ -276,6 +291,16 @@ footer .col-12 {
 @media screen and (max-width: 992px) {
   .nav-tools {
     display: none;
+  }
+
+  .nav-tools-2 {
+    display: block;
+  }
+
+  .navbar-nav {
+    row-gap: 30px;
+    height: 100vh;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 768px) {

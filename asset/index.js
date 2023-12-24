@@ -25,19 +25,16 @@ formItems.forEach((input) => {
 
 formTextArea.addEventListener('input', processInput);
 
-formButton.addEventListener('click', function (e) {
-  e.preventDefault();
-
-  const allInput = formItems.every((item) => item.value.trim() !== '');
-  if (allInput && formTextArea.value.trim() !== '') {
-    submitForm();
-  }
-});
-
 function processInput() {
   const allInput = formItems.every((item) => item.value.trim() !== '');
   if (allInput && formTextArea.value.trim() !== '') {
     formButton.style.backgroundColor = 'royalBlue';
+    formButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (allInput && formTextArea.value.trim() !== '') {
+        submitForm();
+      }
+    });
   } else {
     formButton.style.backgroundColor = '';
   }
@@ -46,10 +43,6 @@ function processInput() {
 function submitForm() {
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyWkkAGymQshH3qvS9kFvWMmoMp_jTSuxZ4k7kPBMF9sYrr2LKYVyUAjVhNyHxC8zYv/exec';
   const form = document.forms['portfolio-contact-form'];
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-  });
 
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
     .then((response) => {
@@ -61,6 +54,10 @@ function submitForm() {
       alert('pesan tidak terkirim(error)!');
     });
 
+  resetForm();
+}
+
+function resetForm() {
   formItems.forEach((input) => {
     input.value = '';
   });

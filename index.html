@@ -234,18 +234,18 @@
               </div>
             </div>
             <div class="col-lg-6 d-flex justify-content-center">
-              <form action="" class="d-flex flex-column align-items-center gap-3">
+              <form action="" class="d-flex flex-column align-items-center gap-3" name="portfolio-contact-form">
                 <div class="form-items">
-                  <input type="text" placeholder="Name / Company Name" />
+                  <input type="text" name="nama" placeholder="Name / Company Name" required />
                 </div>
                 <div class="form-items">
-                  <input type="email" placeholder="e-mail" />
+                  <input type="email" name="email" placeholder="e-mail" required />
                 </div>
                 <div class="form-items">
-                  <textarea rows="8" placeholder="Message"></textarea>
+                  <textarea rows="8" name="pesan" placeholder="Message" required></textarea>
                 </div>
                 <div class="form-items">
-                  <button class="btn-form">SUBMIT</button>
+                  <button class="btn-form" type="submit">SUBMIT</button>
                 </div>
               </form>
             </div>
